@@ -1,2 +1,2 @@
 # FINEMAP
-COMP 565 - Assignment 2
+Implemented fine mapping algorithm to identify the causal SNPs(Single nucleotide polymorphisms) using GWAS (Genome-wide association studies).
