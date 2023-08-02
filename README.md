@@ -13,16 +13,23 @@ By integrating this information, FINEMAP assigns probabilities to each SNP being
 
 It's important to note that fine-mapping is computationally intensive and may require significant computational resources. 
 
+![FINEMAP](https://github.com/Sagarnandeshwar/FINEMAP/blob/main/image/Finemap.png)
+
 ## Assumption  
 We are assuming there are maximum 3 causal SNPs in the locus.  
 
 ## Implementation
 1. Implement the efficient Bayes factor for each causal configurations:
+   ![BF](https://github.com/Sagarnandeshwar/FINEMAP/blob/main/image/BF.png)
+   ![BF](https://github.com/Sagarnandeshwar/FINEMAP/blob/main/image/BFf.png)
    where $s_λ^2$ is user-defined prior variance in the unit of $σ^2$, $Δ_γ$ is the diagonal matrix with diagonal equal to γ (causal configuration). You may assume that $s_λ^2$ = 0.005. Therefore, assuming there are k causal SNPs, then $Σ_{CC}$ = $Ns^2I_k$ = 2.49I_k
-2. Implement the prior calculation for each configurations
-3. Implement posterior inference over all possible configurations assuming at maximum 3 causal SNPs. Therefore, no stochastic sampling is required here (as in the original FINEMAP).
-
-4. Implement posterior inclusion probabilities (PIP) to calculate SNP-level posterior probabilities.
+3. Implement the prior calculation for each configurations
+   ![prior](https://github.com/Sagarnandeshwar/FINEMAP/blob/main/image/prior.png)
+5. Implement posterior inference over all possible configurations assuming at maximum 3 causal SNPs. Therefore, no stochastic sampling is required here (as in the original FINEMAP).
+   ![posterior](https://github.com/Sagarnandeshwar/FINEMAP/blob/main/image/posterior.png)
+   
+7. Implement posterior inclusion probabilities (PIP) to calculate SNP-level posterior probabilities.
+   ![pip](https://github.com/Sagarnandeshwar/FINEMAP/blob/main/image/pip.png)
    Visualize the normalized inferred PIP aligned with GWAS marginal -log10 p-values. It looks like we missed one of the 3 causal SNPs due to its nearly perfect LD with the other causal SNPs. But in general, we are able to pull down quite a few non-causal ones. That is, if we were going to experimentally validate the top SNPs, 2 out of 6 top SNPs based on PIP are true causal ones, whereas we would have got a lot more false positives if we were to follow the -log10 P-values instead.
 
    
