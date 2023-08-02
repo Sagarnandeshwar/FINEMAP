@@ -32,4 +32,9 @@ We are assuming there are maximum 3 causal SNPs in the locus.
    ![pip](https://github.com/Sagarnandeshwar/FINEMAP/blob/main/image/pip.png)
    Visualize the normalized inferred PIP aligned with GWAS marginal -log10 p-values. It looks like we missed one of the 3 causal SNPs due to its nearly perfect LD with the other causal SNPs. But in general, we are able to pull down quite a few non-causal ones. That is, if we were going to experimentally validate the top SNPs, 2 out of 6 top SNPs based on PIP are true causal ones, whereas we would have got a lot more false positives if we were to follow the -log10 P-values instead.
 
+
+![Result](https://github.com/Sagarnandeshwar/FINEMAP/blob/main/image/result1.png)
+![Result](https://github.com/Sagarnandeshwar/FINEMAP/blob/main/image/result2.png)
+![Result](https://github.com/Sagarnandeshwar/FINEMAP/blob/main/image/result3.png)
+
    
